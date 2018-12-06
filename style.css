@@ -4,7 +4,7 @@
 
 body {
   height: 100%;
-  background-image: url(media/background-placeholder.jpg);
+  /*background-image: url(media/background-placeholder.jpg);*/
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: Open Sans;
@@ -28,6 +28,11 @@ input {
 
 strong {
   font-weight: 800;
+}
+
+h1,
+h2 {
+  font-weight: 300;
 }
 
 /*HEADER*/
@@ -60,7 +65,7 @@ header div {
   color: #DD1972;
 }
 
-header div p {
+header div h2 {
   color: white;
   font-size: 25px;
   margin: 0;
@@ -103,6 +108,7 @@ header div p {
 
 article.set-range {
   min-height: 150px;
+  width: 100%;
 }
 
 article.info-input {
@@ -113,16 +119,10 @@ article.score {
   min-height: 10px;
 }
 
-div.min-range {
+article.min-range,
+article.max-range {
   /*border: solid black 5px;*/
-  width: 33%;
-  display: inline-block;
-  margin-right: 20px;
-}
-
-div.max-range {
-  /*border: solid black 5px;*/
-  width: 33%;
+  width: 40%;
   display: inline-block;
   margin-right: 20px;
 }
@@ -138,13 +138,13 @@ label {
   display: inline-block;
   /*border: solid black 5px;*/
   height: 100px;
-  width: 400px;
+  width: 60%;
   margin-right: 20px;
 }
 
 .chall2-guess,
 .chall1-guess {
-  width: 200px;
+  width: 35%;
   margin-right: 0;
 }
 
@@ -181,7 +181,7 @@ button.update-button {
 button.clear-game,
 button.submit-guess,
 button.reset-game {
-  width: 200px;
+  width: 32%;
   margin-top: 25px;
 }
 
