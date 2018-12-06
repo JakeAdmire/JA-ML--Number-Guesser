@@ -54,8 +54,29 @@ header div {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 700px;
   height: 100%;
+  position: relative;
+
+}
+
+.subtitle::before {
+  content: "";
+  background: white;
+  height: 2px;
+  width: 120px;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+}
+
+.subtitle::after {
+  content: "";
+  background: white;
+  height: 2px;
+  width: 120px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
 }
 
 .title {
@@ -70,6 +91,10 @@ header div h2 {
   font-size: 25px;
   margin: 0;
   padding: 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 /*COLUMNS*/
