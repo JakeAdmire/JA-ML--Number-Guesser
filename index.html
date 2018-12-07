@@ -8,7 +8,7 @@
   <header>
     <div>
       <h1 class="title"><strong>NUMBER</strong>GUESSER</h1>
-      <h2>ULTIMATE CHALLENGER EDITION</h2>
+      <h2 class="subtitle">ULTIMATE CHALLENGER EDITION</h2>
     </div>
   </header>
   <div class="columns">
@@ -18,12 +18,12 @@
         <form>
           <article class="min-range">
             <label>Min Range
-              <input type="text" class="">
+              <input type="text" class="min-range-input">
             </label>
           </article>
           <article class="max-range">
             <label>Max Range
-              <input type="text" class="">
+              <input type="text" class="max-range-input">
            </label>
          </article>
           <button type="button" class="update-button">UPDATE</button>
@@ -41,7 +41,7 @@
             </div>
             <div class="chall1-guess">
               <label class="">Guess
-                <input type="number"></input>
+                <input type="number" class="guess1"></input>
               </label>
             </div>
             <h4 class="extra-margin bold">Challenger 2</h4>
@@ -52,7 +52,7 @@
             </div>
             <div class="chall2-guess">
               <label class="">Guess
-               <input type="number"></input>
+               <input type="number" class="guess2"></input>
               </label>
             </div>
             <section>
@@ -73,10 +73,10 @@
            <p class="guess-result1">awaiting guess</p>
          </div>
         <div class="chall2-score">
-          <h5>Challenger 2 Name</h5>
+          <h5 class="score-name2">Challenger 2 Name</h5>
           <p>current guess</p>
-          <h1>0</h1>
-          <p class="guess-result2">awaiting guess</p>
+          <h1  class="guess-result2">0</h1>
+          <p>awaiting guess</p>
         </div>
       </section>
       </article>
@@ -96,5 +96,6 @@
       <!-- I THINK THIS CODE WILL BE INSERTED USING JAVASCRIPT, NOT NATIVELY IN THE STATIC HTML FILE -->
     </section>
   </div>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 <html>
