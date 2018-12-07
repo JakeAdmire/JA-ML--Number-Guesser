@@ -4,7 +4,7 @@
 
 body {
   height: 100%;
-  /*background-image: url(media/background-placeholder.jpg);*/
+  background-image: url(media/background-placeholder.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: Open Sans;
@@ -80,10 +80,10 @@ header div h2 {
 
 .column{
   width: 50%;
-  height: 950px;
+  /*height: 950px;*/
   border: black solid 5px;
   margin: 0;
-  padding: 0;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,7 +98,7 @@ header div h2 {
 
 .left-cards {
   box-sizing: border-box;
-  width: 95%;
+  width: 100%;
   border: #efefef solid 2px;
   margin-top: 15px;
   padding: 20px;
@@ -108,21 +108,35 @@ header div h2 {
 
 article.set-range {
   min-height: 150px;
-  width: 100%;
+  margin: 0;
+  /*width: 100%;*/
 }
 
 article.info-input {
-  height: 700px;
+  /*height: 700px;*/
 }
 
 article.score {
-  min-height: 10px;
+  /*min-height: 10px;*/
+}
+
+article.score h5,
+article.score p,
+article.score h1 {
+  margin: 0;
+  font-size: 23px;
+}
+
+article.score h1 {
+  font-weight: 800;
+  font-size: 100px;
+  margin: -25px;
 }
 
 article.min-range,
 article.max-range {
   /*border: solid black 5px;*/
-  width: 40%;
+  width: 35%;
   display: inline-block;
   margin-right: 20px;
 }
@@ -175,7 +189,7 @@ button:hover {
 }
 
 button.update-button {
-  width: 150px;
+  width: 22%;
 }
 
 button.clear-game,
@@ -200,5 +214,24 @@ span.range-end {
   font-weight: 800;
   text-decoration: underline;
 }
+
+.chall1-score,
+.chall2-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  /*border: solid black 3px;*/
+}
+
+.chall1-score {
+  border-right: solid #efefef 3px;
+}
+
+.align-scores {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 /*RIGHT COLUMN*/
