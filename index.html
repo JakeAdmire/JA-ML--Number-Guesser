@@ -1,101 +1,103 @@
 <!doctype html>
 <html>
-<head>
-  <link href="style.css" type="text/css" rel="stylesheet" />
-   <link href="https://fonts.googleapis.com/css?family=Mukta|Open+Sans:300,700,800" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <div>
-      <h1 class="title"><strong>NUMBER</strong>GUESSER</h1>
-      <h2 class="subtitle">ULTIMATE CHALLENGER EDITION</h2>
-    </div>
-  </header>
-  <div class="columns">
-    <section class="column leftcolumn">
-      <article class="left-cards set-range">
-        <h4 class="bold">Set Range</h4>
-        <form>
-          <article class="min-range">
-            <label>Min Range
-              <input type="text" class="min-range-input">
-            </label>
-          </article>
-          <article class="max-range">
-            <label>Max Range
-              <input type="text" class="max-range-input">
-           </label>
-         </article>
-          <button type="button" class="update-button">UPDATE</button>
-        </form>
-      </article>
-      <article class="left-cards info-input">
-        <p class="current-range">The Current Range is <span class="range-start">1</span> to <span class="range-end">100</span></p>
-        <div class="challenger1">
+  <head>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Mukta|Open+Sans:300,700,800" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 class="title"><strong>NUMBER</strong>GUESSER</h1>
+        <h2 class="subtitle">ULTIMATE CHALLENGER EDITION</h2>
+      </div>
+    </header>
+    <div class="columns">
+      <section class="column leftcolumn">
+        <article class="left-cards set-range">
+          <h4 class="bold">Set Range</h4>
           <form>
-            <h4 class="bold">Challenger 1</h4>
-            <div class="chall1-name">
-              <label class="">Name
-                <input type="text" name="" class="name1">
+            <article class="min-range">
+              <label>Min Range
+                <input type="text" class="min-range-input">
               </label>
-            </div>
-            <div class="chall1-guess">
-              <label class="">Guess
-                <input type="number" class="guess1"></input>
+            </article>
+            <article class="max-range">
+              <label>Max Range
+                <input type="text" class="max-range-input">
               </label>
-            </div>
-            <h4 class="extra-margin bold">Challenger 2</h4>
-            <div class="chall2-name">
-              <label class="">Name
-                <input type="text" name="" class="name2">
-              </label>
-            </div>
-            <div class="chall2-guess">
-              <label class="">Guess
-               <input type="number" class="guess2"></input>
-              </label>
-            </div>
-            <section>
-             <button class="submit-guess" type="submit">SUBMIT GUESS</button>
-             <button class="reset-game" type="reset">RESET GAME</button>
-             <button class="clear-game" type="reset">CLEAR GAME</button>
-            </section>
+            </article>
+            <button type="button" class="update-button">UPDATE</button>
           </form>
-        </div>
-      </article>
-      <article class="left-cards score">
-        <h4 class="bold">Latest Score</h4>
-        <section class="align-scores">
-          <div class="chall1-score">
-            <h5>Challenger 1 Name</h5>
-            <p>current guess</p>
-            <h1>0</h1>
-           <p class="guess-result1">awaiting guess</p>
-         </div>
-        <div class="chall2-score">
-          <h5 class="score-name2">Challenger 2 Name</h5>
-          <p>current guess</p>
-          <h1  class="guess-result2">0</h1>
-          <p>awaiting guess</p>
-        </div>
+        </article>
+        <article class="left-cards info-input">
+          <p class="current-range">The Current Range is <span class="range-start">1</span> to <span class="range-end">100</span></p>
+          <div class="challenger1">
+            <form>
+              <h4 class="bold">Challenger 1</h4>
+              <div class="chall1-name">
+                <label class="">Name
+                  <input type="text" name="" class="name1">
+                </label>
+              </div>
+              <div class="chall1-guess">
+                <label class="">Guess
+                  <input type="number" class="guess1"></input>
+                </label>
+              </div>
+              <h4 class="extra-margin bold">Challenger 2</h4>
+              <div class="chall2-name">
+                <label class="">Name
+                  <input type="text" name="" class="name2">
+                </label>
+              </div>
+              <div class="chall2-guess">
+                <label class="">Guess
+                  <input type="number" class="guess2"></input>
+                </label>
+              </div>
+              <section>
+                <button class="submit-guess" type="submit">SUBMIT GUESS</button>
+                <button class="reset-game" type="reset">RESET GAME</button>
+                <button class="clear-game" type="reset">CLEAR GAME</button>
+              </section>
+            </form>
+          </div>
+        </article>
+        <article class="left-cards score">
+          <h4 class="bold">Latest Score</h4>
+          <section class="align-scores">
+            <div class="chall1-score">
+              <h5>Challenger 1 Name</h5>
+              <p>current guess</p>
+              <h1>0</h1>
+              <p class="guess-result1">awaiting guess</p>
+            </div>
+            <div class="chall2-score">
+              <h5 class="score-name2">Challenger 2 Name</h5>
+              <p>current guess</p>
+              <h1  class="guess-result2">0</h1>
+              <p>awaiting guess</p>
+            </div>
+          </section>
+        </article>
       </section>
-      </article>
-    </section>
-    <section class="column rightcolumn">
-      <!-- I THINK THIS CODE WILL BE INSERTED USING JAVASCRIPT, NOT NATIVELY IN THE STATIC HTML FILE -->
-     <!--  <div class="score-card">
-        <p><strong>CHALLENGER 1 NAME</strong> vs <strong>CHALLENGER 2 NAME</strong></p>
-        <hr>
-        <h2>CHALLENGER 2 NAME</h2>
-        <p>WINNER</p>
-        <hr>
-        <p><strong>0</strong> GUESSES</p>
-        <p><strong>0</strong> MINUTES</p>
-        <button>X</button>
-      </div> -->
-      <!-- I THINK THIS CODE WILL BE INSERTED USING JAVASCRIPT, NOT NATIVELY IN THE STATIC HTML FILE -->
-    </section>
-  </div>
+      <section class="column right-column">
+        <!-- I THINK THIS CODE WILL BE INSERTED USING JAVASCRIPT, NOT NATIVELY IN THE STATIC HTML FILE -->
+        <article class="score-card">
+          <p><strong>CHALLENGER 1 NAME</strong> vs <strong>CHALLENGER 2 NAME</strong></p>
+          <hr>
+          <h2 class="chall2-card">CHALLENGER 2 NAME</h2>
+          <p class="winner">WINNER</p>
+          <hr>
+          <section class="score-card-bottom">
+          <section class="score-card-item"><strong>0</strong> GUESSES</section>
+        <section class="score-card-item"><strong>0</strong> MINUTES</section>
+        <button class="score-card-item x-button">X</button>
+      </section>
+    </article>
+    <!-- I THINK THIS CODE WILL BE INSERTED USING JAVASCRIPT, NOT NATIVELY IN THE STATIC HTML FILE -->
+  </section>
+  
   <script type="text/javascript" src="main.js"></script>
 </body>
 <html>
