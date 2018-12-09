@@ -1,3 +1,7 @@
+function randomNumberGenerator() {
+  return Math.floor(Math.random() * 101);
+}
+
 var minRange = document.querySelector('.min-range-input');
 var maxRange = document.querySelector('.max-range-input');
 var updateButton = document.querySelector('.update-button');
@@ -12,14 +16,13 @@ var scoreName1 = document.querySelector('.score-name1');
 var scoreName2 = document.querySelector('.score-name2');
 var guessResult1 = document.querySelector('.guess-result1');
 var guessResult2 = document.querySelector('.guess-result2');
-var randomNumber;
+var randomNumber = randomNumberGenerator();
 
 
 
 updateButton.addEventListener('click', updateRange);
 submitButton.addEventListener('click', submitGuess);
 
-randomNumberGenerator()
 
 function updateRange() {
   rangeStart.innerText = minRange.value;
@@ -29,8 +32,4 @@ function updateRange() {
 function submitGuess(event) {
   event.preventDefault();
   console.log('submit guess')
-}
-
-function randomNumberGenerator() {
-  randomNumber = 42;
 }
