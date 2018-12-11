@@ -35,3 +35,30 @@ function submitGuess(event) {
 	guessResult1.innerText = guess1.value;
 	guessResult2.innerText = guess2.value;
 }
+
+// When 'submit guess' is clicked
+  // the <h5> 'Challenger 1 Name' will equal the variable 'name1', 
+
+  // the <h5> 'Challenger 2 Name' will equal the variable 'name2',
+
+  // the <h1> class '.latest-guess-1' will equal the variable 'guess1',
+
+  // the <h1> class '.latest-guess-2' will equal the variable 'guess2',
+
+  //  if 'guess1' is < randomNumber, the variable 'guessResult1' will equal 'thats too low',
+    //  elseif 'guess1' is > randomNumber, the variable 'guessResult1' will equal 'thats too high',
+      // else, the variable 'guessResult1' will equal 'BOOM!' 
+      // and set chall1won to true
+
+  //  if 'guess2' is < randomNumber, the variable 'guessResult2' will equal 'thats too low',
+    //  elseif 'guess2' is > randomNumber, the variable 'guessResult2' will equal 'thats too high',
+      // else, the variable 'guessResult2' will equal 'BOOM!'
+      // and set chall2won to true
+
+  //  if chall1won and chall2won are both true, create tie html scorecard
+    // elseif chall1won is true, create chall1won html scorecard
+      // elseif chall2won is true, create chall2won html scorecard
+
+// When 'reset game' is clicked 
+
+  // 
