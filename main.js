@@ -1,7 +1,3 @@
-function randomNumberGenerator() {
-  return Math.floor(Math.random() * 101);
-}
-
 var minRange = document.querySelector('.min-range-input');
 var maxRange = document.querySelector('.max-range-input');
 var updateButton = document.querySelector('.update-button');
@@ -16,20 +12,26 @@ var scoreName1 = document.querySelector('.score-name1');
 var scoreName2 = document.querySelector('.score-name2');
 var guessResult1 = document.querySelector('.guess-result1');
 var guessResult2 = document.querySelector('.guess-result2');
-var randomNumber = randomNumberGenerator();
-
-
+var guessMessage1 = document.querySelector('.guess-message1');
+var guessMessage2 = document.querySelector('.guess-message2');
 
 updateButton.addEventListener('click', updateRange);
 submitButton.addEventListener('click', submitGuess);
 
+function randomNumberGenerator() {
+	return Math.floor(Math.random() * maxRange.value) + parseInt(minRange.value);
+}
 
 function updateRange() {
-  rangeStart.innerText = minRange.value;
-  rangeEnd.innerText = maxRange.value;
+	rangeStart.innerText = minRange.value;
+	rangeEnd.innerText = maxRange.value;
+	randomNumber = randomNumberGenerator();
 }
 
 function submitGuess(event) {
-  event.preventDefault();
-  console.log('submit guess')
+	event.preventDefault();
+	scoreName1.innerText = name1.value;
+	scoreName2.innerText = name2.value;
+	guessResult1.innerText = guess1.value;
+	guessResult2.innerText = guess2.value;
 }
