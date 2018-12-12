@@ -14,51 +14,62 @@ var guessResult1 = document.querySelector('.guess-result1');
 var guessResult2 = document.querySelector('.guess-result2');
 var guessMessage1 = document.querySelector('.guess-message1');
 var guessMessage2 = document.querySelector('.guess-message2');
+var randomNumber = randomNumberGenerator(1, 100)
+
 
 updateButton.addEventListener('click', updateRange);
-submitButton.addEventListener('click', submitGuess);
+submitButton.addEventListener('click', functionCaller);
 
-function randomNumberGenerator() {
+function randomNumberGenerator(min, max) {
+
+	return Math.ceil(Math.random() * (max - min) + min);
+}
+function customNumberGenerator() {
 	return Math.floor(Math.random() * maxRange.value) + parseInt(minRange.value);
 }
-
+console.log(randomNumber);
 function updateRange() {
 	rangeStart.innerText = minRange.value;
 	rangeEnd.innerText = maxRange.value;
-	randomNumber = randomNumberGenerator();
+	randomNumber = customNumberGenerator();
+	console.log("custom number", randomNumber)
 }
 
-function submitGuess(event) {
-	event.preventDefault();
+function submitGuess() {
 	scoreName1.innerText = name1.value;
 	scoreName2.innerText = name2.value;
 	guessResult1.innerText = guess1.value;
 	guessResult2.innerText = guess2.value;
 }
 
-// When 'submit guess' is clicked
-  // the <h5> 'Challenger 1 Name' will equal the variable 'name1', 
 
-  // the <h5> 'Challenger 2 Name' will equal the variable 'name2',
+function compareGuess() {
+	console.log(guess1.value);
+	if (guess1.value > parseInt(randomNumber)) {
+		guessMessage1.innerText = "Your Guess is Too High";
+	} else if (guess1.value < parseInt(randomNumber)) {
+		guessMessage1.innerText = "Your Guess is Too Low";
+	} else {
+		guessMessage1.innerText =
+	 "BOOM!!!";
+	}
+}
 
-  // the <h1> class '.latest-guess-1' will equal the variable 'guess1',
+function compareGuess2() {
+	console.log(guess2.value);
+	if (guess2.value > parseInt(randomNumber)) {
+		guessMessage2.innerText = "Your Guess is Too High";
+	} else if (guess2.value < parseInt(randomNumber)) {
+		guessMessage2.innerText = "Your Guess is Too Low";
+	} else {
+		guessMessage2.innerText =
+	 "BOOM!!!";
+	}
+}
 
-  // the <h1> class '.latest-guess-2' will equal the variable 'guess2',
-
-  //  if 'guess1' is < randomNumber, the variable 'guessResult1' will equal 'thats too low',
-    //  elseif 'guess1' is > randomNumber, the variable 'guessResult1' will equal 'thats too high',
-      // else, the variable 'guessResult1' will equal 'BOOM!' 
-      // and set chall1won to true
-
-  //  if 'guess2' is < randomNumber, the variable 'guessResult2' will equal 'thats too low',
-    //  elseif 'guess2' is > randomNumber, the variable 'guessResult2' will equal 'thats too high',
-      // else, the variable 'guessResult2' will equal 'BOOM!'
-      // and set chall2won to true
-
-  //  if chall1won and chall2won are both true, create tie html scorecard
-    // elseif chall1won is true, create chall1won html scorecard
-      // elseif chall2won is true, create chall2won html scorecard
-
-// When 'reset game' is clicked 
-
-  // 
+function functionCaller(event) {
+	event.preventDefault();
+	submitGuess();
+	compareGuess();
+	compareGuess2();
+}

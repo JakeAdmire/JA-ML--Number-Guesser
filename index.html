@@ -3,6 +3,7 @@
   <head>
     <link href="style.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Mukta|Open+Sans:300,700,800" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header>
@@ -18,13 +19,13 @@
           <form>
             <article class="min-range">
               <label>Min Range
-                <input type="text" class="min-range-input">
+                <input type="number" class="min-range-input">
               </label>
             </article>
             <article class="max-range">
               <label>Max Range
-                <input type="text" class="max-range-input">
-                </label>
+                <input type="number" class="max-range-input">
+              </label>
             </article>
             <button type="button" class="update-button">UPDATE</button>
           </form>
@@ -57,8 +58,8 @@
               </div>
               <section class="button-group">
                 <button class="submit-guess" type="submit">SUBMIT GUESS</button>
-                <button class="reset-game" type="reset">RESET GAME</button>
-                <button class="clear-game" type="reset">CLEAR GAME</button>
+                <button class="reset-game" type="reset" value="Disabled">RESET GAME</button>
+                <button class="clear-game" type="reset" value="Disabled">CLEAR GAME</button>
               </section>
             </form>
           </div>
@@ -70,13 +71,13 @@
               <h5 class="score-name1">Challenger 1 Name</h5>
               <p>current guess</p>
               <h1 class="guess-result1">0</h1>
-              <p class="guess-message1">awaiting guess</p>
+              <p class="guess-message1">""</p>
             </div>
             <div class="chall2-score">
               <h5 class="score-name2">Challenger 2 Name</h5>
               <p>current guess</p>
               <h1  class="guess-result2">0</h1>
-              <p class="guess-message2">awaiting guess</p>
+              <p class="guess-message2">""</p>
             </div>
           </section>
         </article>
