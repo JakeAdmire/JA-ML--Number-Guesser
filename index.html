@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <div>
+      <div class=header>
         <h1 class="title"><strong>NUMBER</strong>GUESSER</h1>
         <h2 class="subtitle">ULTIMATE CHALLENGER EDITION</h2>
       </div>
@@ -58,8 +58,8 @@
               </div>
               <section class="button-group">
                 <button class="submit-guess" type="submit">SUBMIT GUESS</button>
-                <button class="reset-game" type="reset" value="Disabled">RESET GAME</button>
-                <button class="clear-game" type="reset" value="Disabled">CLEAR GAME</button>
+                <button class="reset-game" type="reset" disabled="true">RESET GAME</button>
+                <button class="clear-game" type="reset" disabled="true">CLEAR GAME</button>
               </section>
             </form>
           </div>
@@ -71,13 +71,14 @@
               <h5 class="score-name1">Challenger 1 Name</h5>
               <p>current guess</p>
               <h1 class="guess-result1">0</h1>
-              <p class="guess-message1">""</p>
+              <p class="guess-message1"></p>
             </div>
             <div class="chall2-score">
               <h5 class="score-name2">Challenger 2 Name</h5>
               <p>current guess</p>
               <h1  class="guess-result2">0</h1>
-              <p class="guess-message2">""</p>
+              <p class="guess-message2">
+              </p>
             </div>
           </section>
         </article>
@@ -93,7 +94,7 @@
           <section class="score-card-bottom">
           <section class="score-card-item"><strong>0</strong> GUESSES</section>
         <section class="score-card-item"><strong>0</strong> MINUTES</section>
-        <button class="score-card-item x-button">X</button>
+        <button class="score-card-item x-button" type="reset">X</button>
       </section>
     </article>
     <!-- I THINK THIS CODE WILL BE INSERTED USING JAVASCRIPT, NOT NATIVELY IN THE STATIC HTML FILE -->
