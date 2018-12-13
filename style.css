@@ -3,10 +3,6 @@
 }
 
 body {
-  height: 100%;
-  background-image: url(media/background-placeholder.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
   font-family: Open Sans;
   margin: 0;
   color: #6E6E6E;
@@ -96,18 +92,14 @@ header div h2 {
 }
 
 /*COLUMNS*/
-.columns {
+.column-container {
   display: flex;
 }
 
 .column {
-  width: 50%;  /*height: 950px;*/
-  border: black solid 5px;
-  margin: 0;
-  padding: 15px;
+  border: grey solid 1px;
+  padding: 1%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -117,10 +109,6 @@ input {
 }
 
 /*LEFT COLUMN*/
-.leftcolumn {
-  background: #F7F7F7;
-}
-
 .left-cards {
   box-sizing: border-box;
   width: 100%;
@@ -149,6 +137,7 @@ article.score {
 article.score h5, article.score p, article.score h1 {
   margin: 0;
   font-size: 23px;
+  text-align: center;
 }
 
 article.score h1 {
@@ -223,6 +212,7 @@ button {
   font-size: 20px;
   font-weight: 700;
   height: 45px;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -261,11 +251,6 @@ span.range-start, span.range-end {
 }
 
 /*RIGHT COLUMN*/
-.columnright-column {
-  background: #404041;
-  display: flex;
-}
-
 .score-card {
   border: solid 2px grey;
   justify-content: center;
@@ -318,3 +303,44 @@ section.score-card-bottom {
   font-size: 40px;
   margin: 0;
 }
+
+@media only screen and (min-width:326px) and (max-width:768px) {
+  .header {
+    letter-spacing: -1.5px;
+    text-align: center;
+  }
+
+  .header h1 {
+    font-size: 42px;
+  }
+
+  .header h2 {
+    font-size: 16px;
+  }
+
+  .subtitle::before {
+    width: 65px;
+  }
+
+  .subtitle::after {
+    width: 65px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .column-container {
+    flex-wrap: wrap;
+  }
+
+  left-cards.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

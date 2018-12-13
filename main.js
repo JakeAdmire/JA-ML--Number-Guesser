@@ -47,7 +47,6 @@ function submitGuess() {
 	guessResult2.innerText = guess2.value;
 }
 
-	
 function compareGuess() {
 	console.log(guess1.value);
 	if (guess1.value > parseInt(randomNumber)) {
