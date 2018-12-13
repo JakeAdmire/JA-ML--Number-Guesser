@@ -150,3 +150,12 @@ function scorecardTwo(){
 	chall2Scorecard.innerText = name2.value;
 	cardWinner.innerText = name2.value;
 }
+
+function clearDisable(event) {
+	var enableResetButton = document.querySelector('.reset-game');
+	var enableClearButton = document.querySelector('.clear-game');
+	if (event.target.value != '') {
+    enableResetButton.disabled = false;
+    enableClearButton.disabled = false;
+	}
+}

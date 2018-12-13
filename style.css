@@ -96,7 +96,7 @@ header div h2 {
 }
 
 /*COLUMNS*/
-.columns {
+.column-container {
   display: flex;
 }
 
@@ -105,8 +105,6 @@ header div h2 {
   margin: 0;
   padding: 15px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
   background: #D0D2D3;
 }
@@ -150,6 +148,7 @@ article.score {
 article.score h5, article.score p, article.score h1 {
   margin: 0;
   font-size: 23px;
+  text-align: center;
 }
 
 article.score h1 {
@@ -228,6 +227,7 @@ button {
   font-size: 20px;
   font-weight: 700;
   height: 45px;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -328,3 +328,44 @@ section.score-card-bottom {
   font-size: 40px;
   margin: 0;
 }
+
+@media only screen and (min-width:326px) and (max-width:768px) {
+  .header {
+    letter-spacing: -1.5px;
+    text-align: center;
+  }
+
+  .header h1 {
+    font-size: 42px;
+  }
+
+  .header h2 {
+    font-size: 16px;
+  }
+
+  .subtitle::before {
+    width: 65px;
+  }
+
+  .subtitle::after {
+    width: 65px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .column-container {
+    flex-wrap: wrap;
+  }
+
+  left-cards.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
