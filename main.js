@@ -42,12 +42,6 @@ function submitGuess() {
 	guessResult2.innerText = guess2.value;
 }
 
-//when the submit button is pressed
-//take the guess value and compare to generated number
-//use parseInt
-//message needs to populate with new message
-//guess-message1 and guess-message2 - update innerText
-
 function compareGuess() {
 	console.log(guess1.value);
 	if (guess1.value > parseInt(randomNumber)) {
