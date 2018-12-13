@@ -74,9 +74,11 @@ function functionCaller(event){
 function updateFirstName(){
 	if (name1.value === ''){
 		document.getElementById("name1").classList.add("error");
+		document.getElementById("name-input1").classList.add("error-border");
 	} else {
 		scoreName1.innerText = name1.value;
 		document.getElementById("name1").classList.remove("error");
+		document.getElementById("name-input1").classList.remove("error-border");
 	}
 }
 
@@ -84,22 +86,27 @@ function updateFirstGuess(){
 	if (guess1.value === ''){
 		document.getElementById("guess1").classList.add("error");
 		document.getElementById("guess1-not-valid").classList.remove("error");
+		document.getElementById("guess-input1").classList.add("error-border");
 	} else if (parseInt(guess1.value) < parseInt(minRange.value) || parseInt(guess1.value) > parseInt(maxRange.value)){
 		document.getElementById("guess1-not-valid").classList.add("error");
 		document.getElementById("guess1").classList.remove("error");
+		document.getElementById("guess-input1").classList.add("error-border");
 	} else {
 		guessResult1.innerText = guess1.value;
 		document.getElementById("guess1").classList.remove("error");
 		document.getElementById("guess1-not-valid").classList.remove("error");
+		document.getElementById("guess-input1").classList.remove("error-border");
 	}
 }
 
 function updateSecondName(){
 	if (name2.value === ''){
 		document.getElementById("name2").classList.add("error");
+		document.getElementById("name-input2").classList.add("error-border");
 	} else {
 		scoreName2.innerText = name2.value;
 		document.getElementById("name2").classList.remove("error");
+		document.getElementById("name-input2").classList.remove("error-border");
 	}
 }
 
@@ -107,13 +114,16 @@ function updateSecondGuess(){
 	if (guess2.value === ''){
 		document.getElementById("guess2").classList.add("error");
 		document.getElementById("guess2-not-valid").classList.remove("error");
+		document.getElementById("guess-input2").classList.add("error-border");
 	} else if (parseInt(guess2.value) < parseInt(minRange.value) || parseInt(guess2.value) > parseInt(maxRange.value)){
 		document.getElementById("guess2-not-valid").classList.add("error");
 		document.getElementById("guess2").classList.remove("error");
+		document.getElementById("guess-input2").classList.add("error-border");
 	} else {
 		guessResult2.innerText = guess2.value;
 		document.getElementById("guess2").classList.remove("error");
 		document.getElementById("guess2-not-valid").classList.remove("error");
+		document.getElementById("guess-input2").classList.remove("error-border");
 	}
 }
 

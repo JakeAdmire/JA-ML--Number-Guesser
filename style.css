@@ -115,7 +115,7 @@ input {
 }
 
 /*LEFT COLUMN*/
-.leftcolumn {
+.left-column {
   background: #F7F7F7;
   border-right: #6e6e6e solid 3px;
 }
@@ -193,6 +193,10 @@ label {
 span.error {
   visibility: visible;
   color: #DD1972;
+}
+
+.error-border {
+  border: #DD1972 solid 3px;
 }
 
 .guess1-spans,
