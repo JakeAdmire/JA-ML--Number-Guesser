@@ -4,7 +4,7 @@
 
 body {
   height: 100%;
-  background-image: url(media/background-placeholder.jpg);
+  /*background-image: url(media/background-placeholder.jpg);*/
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: Open Sans;
@@ -41,7 +41,7 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 170px;  /*border: black solid 5px;*/
+  height: 170px;
   margin: 0;
   background: #404041;
 }
@@ -101,14 +101,14 @@ header div h2 {
 }
 
 .column {
-  width: 50%;  /*height: 950px;*/
-  border: black solid 5px;
+  width: 50%;
   margin: 0;
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  background: #D0D2D3;
 }
 
 input {
@@ -119,6 +119,7 @@ input {
 /*LEFT COLUMN*/
 .leftcolumn {
   background: #F7F7F7;
+  border-right: #6e6e6e solid 3px;
 }
 
 .left-cards {
@@ -192,20 +193,24 @@ label {
 
 span.error {
   visibility: visible;
-  color: red;
+  color: #DD1972;
 }
 
 .guess1-spans,
 .guess2-spans,
 .name1-spans,
-.name2-spans {
+.name2-spans,
+.chall1-name section,
+.chall2-name section {
   position: relative;
 }
 
 .guess1-spans span,
 .guess2-spans span,
 .name1-spans span,
-.name2-spans span {
+.name2-spans span,
+#name1,
+#name2 {
   position: absolute;
 }
 
@@ -261,12 +266,15 @@ span.range-start, span.range-end {
 }
 
 /*RIGHT COLUMN*/
-.columnright-column {
-  background: #404041;
+.right-column {
   display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .score-card {
+  width: 95%;
   border: solid 2px grey;
   justify-content: center;
   align-items: center;
@@ -285,8 +293,10 @@ hr {
 section.score-card-bottom {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 10px;
 }
 
@@ -307,7 +317,7 @@ section.score-card-bottom {
   padding: 0;
 }
 
-.chall2-card {
+.card-winner {
   font-weight: 800;
   font-size: 40px;
   margin: 0;

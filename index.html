@@ -39,7 +39,9 @@
                 <label class="">Name
                   <input type="text" name="" class="name1">
                 </label>
-                <span id="name1" class="invisible">Please enter a name.</span>
+                <section>
+                  <span id="name1" class="invisible">Please enter a name.</span>
+                </section>
               </div>
               <div class="chall1-guess">
                 <label class="">Guess
@@ -47,8 +49,7 @@
                 </label>
                 <section class="guess1-spans">
                  <span id="guess1" class="invisible">Please enter a guess.</span>
-                 <span id="guess1-too-low" class="invisible">Guess is too low.</span>
-                 <span id="guess1-too-high" class="invisible">Guess is too high.</span>
+                 <span id="guess1-not-valid" class="invisible">Not valid.</span>
                 </section>
               </div>
               <h4 class="extra-margin bold">Challenger 2</h4>
@@ -56,13 +57,18 @@
                 <label class="">Name
                   <input type="text" name="" class="name2">
                 </label>
-                <span id="name2" class="invisible">Please enter a name.</span>
+                <article>
+                  <span id="name2" class="invisible">Please enter a name.</span>
+                </article>
               </div>
               <div class="chall2-guess">
                 <label class="">Guess
                   <input type="number" class="guess2"></input>
                 </label>
-                <span id="guess2" class="invisible">Please enter a guess.</span>
+                <section class="guess2-spans">
+                 <span id="guess2" class="invisible">Please enter a guess.</span>
+                 <span id="guess2-not-valid" class="invisible">Not valid.</span>
+                </section>
               </div>
               <section class="button-group">
                 <button class="submit-guess" type="submit">SUBMIT GUESS</button>
@@ -79,13 +85,13 @@
               <h5 class="score-name1">Challenger 1 Name</h5>
               <p>current guess</p>
               <h1 class="guess-result1">0</h1>
-              <p class="guess-message1">""</p>
+              <p class="guess-message1">awaiting guess..</p>
             </div>
             <div class="chall2-score">
               <h5 class="score-name2">Challenger 2 Name</h5>
               <p>current guess</p>
               <h1  class="guess-result2">0</h1>
-              <p class="guess-message2">""</p>
+              <p class="guess-message2">awaiting guess..</p>
             </div>
           </section>
         </article>
@@ -93,9 +99,9 @@
       <section class="column right-column">
 <!-- I THINK THIS CODE WILL BE INSERTED USING JAVASCRIPT, NOT NATIVELY IN THE STATIC HTML FILE -->
         <article class="score-card">
-          <p><strong>CHALLENGER 1 NAME</strong> vs <strong>CHALLENGER 2 NAME</strong></p>
+          <p><strong class="chall1-scorecard">CHALLENGER 1 NAME </strong> vs <strong class="chall2-scorecard"> CHALLENGER 2 NAME</strong></p>
           <hr>
-          <h2 class="chall2-card">CHALLENGER 2 NAME</h2>
+          <h2 class="card-winner">CHALLENGER 2 NAME</h2>
           <p class="winner">WINNER</p>
           <hr>
           <section class="score-card-bottom">

@@ -12,79 +12,37 @@ var scoreName1 = document.querySelector('.score-name1');
 var scoreName2 = document.querySelector('.score-name2');
 var guessResult1 = document.querySelector('.guess-result1');
 var guessResult2 = document.querySelector('.guess-result2');
-// var guessMessage1 = document.querySelector('.guess-message1');
-// var guessMessage2 = document.querySelector('.guess-message2');
-// var randomNumber = randomNumberGenerator(1, 100)
+var guessMessage1 = document.querySelector('.guess-message1');
+var guessMessage2 = document.querySelector('.guess-message2');
+var chall1Scorecard = document.querySelector('.chall1-scorecard');
+var chall2Scorecard = document.querySelector('.chall2-scorecard');
+var cardWinner = document.querySelector('.card-winner');
+var randomNumber = randomNumberGenerator(1, 100);
 
+console.log(randomNumber);
 
-// updateButton.addEventListener('click', updateRange);
-// submitButton.addEventListener('click', functionCaller);
+function defaultRange(){
+	parseInt(minRange.value) = 1;
+	parseInt(maxRange.value) = 100;
+}
 
-// function randomNumberGenerator(min, max) {
+function randomNumberGenerator(min, max) {
+	return Math.ceil(Math.random() * (max - min) + min);
+}
 
-// 	return Math.ceil(Math.random() * (max - min) + min);
-// }
-// function customNumberGenerator() {
-// 	return Math.floor(Math.random() * maxRange.value) + parseInt(minRange.value);
-// }
-// console.log(randomNumber);
-// function updateRange() {
-// 	rangeStart.innerText = minRange.value;
-// 	rangeEnd.innerText = maxRange.value;
-// 	randomNumber = customNumberGenerator();
-// 	console.log("custom number", randomNumber)
-// }
+function customNumberGenerator() {
+	return Math.floor(Math.random() * maxRange.value) + parseInt(minRange.value);
+}
 
-// function submitGuess() {
-// 	scoreName1.innerText = name1.value;
-// 	scoreName2.innerText = name2.value;
-// 	guessResult1.innerText = guess1.value;
-// 	guessResult2.innerText = guess2.value;
-// }
-
-
-// function compareGuess() {
-// 	console.log(guess1.value);
-// 	if (guess1.value > parseInt(randomNumber)) {
-// 		guessMessage1.innerText = "Your Guess is Too High";
-// 	} else if (guess1.value < parseInt(randomNumber)) {
-// 		guessMessage1.innerText = "Your Guess is Too Low";
-// 	} else {
-// 		guessMessage1.innerText =
-// 	 "BOOM!!!";
-// 	}
-// }
-
-// function compareGuess2() {
-// 	console.log(guess2.value);
-// 	if (guess2.value > parseInt(randomNumber)) {
-// 		guessMessage2.innerText = "Your Guess is Too High";
-// 	} else if (guess2.value < parseInt(randomNumber)) {
-// 		guessMessage2.innerText = "Your Guess is Too Low";
-// 	} else {
-// 		guessMessage2.innerText =
-// 	 "BOOM!!!";
-// 	}
-// }
-
-// function functionCaller(event) {
-// 	event.preventDefault();
-// 	submitGuess();
-// 	compareGuess();
-// 	compareGuess2();
-// }
-
-
-// When .update-button is pressed 
 updateButton.addEventListener('click', updateRanges);
 
 function updateRanges(){
 	updateMinRange();
 	updateMaxRange();
+	randomNumber = customNumberGenerator();
+	console.log("custom number", randomNumber);
 }
-//   if .min-range-input = ""
-//     range-start = 1
-//   else .range-start = .min-range-input
+
 function updateMinRange(){
 	if (minRange.value === ''){
 		rangeStart.innerText = 1;
@@ -92,8 +50,7 @@ function updateMinRange(){
 		rangeStart.innerText = minRange.value;
 	}
 }
-//   if .max-range-input = ""
-//     range-end = 100
+
 function updateMaxRange(){
 	if (maxRange.value === ''){
 		rangeEnd.innerText = 100;
@@ -101,7 +58,7 @@ function updateMaxRange(){
 		rangeEnd.innerText = maxRange.value;
 	}
 }
-// When .submit-guess-button is pressed
+
 submitButton.addEventListener('click', functionCaller);
 
 function functionCaller(event){
@@ -110,11 +67,10 @@ function functionCaller(event){
 	updateFirstGuess();
 	updateSecondName();
 	updateSecondGuess();
+	playerOneWins();
+	playerTwoWins();
 }
-//   if .name1 = ""
-//     give name1 and name1-error new id that makes name1-error visible and makes name1 have a red border
-//   else
-//     .score-name1 = .name1
+
 function updateFirstName(){
 	if (name1.value === ''){
 		document.getElementById("name1").classList.add("error");
@@ -127,9 +83,14 @@ function updateFirstName(){
 function updateFirstGuess(){
 	if (guess1.value === ''){
 		document.getElementById("guess1").classList.add("error");
+		document.getElementById("guess1-not-valid").classList.remove("error");
+	} else if (parseInt(guess1.value) < parseInt(minRange.value) || parseInt(guess1.value) > parseInt(maxRange.value)){
+		document.getElementById("guess1-not-valid").classList.add("error");
+		document.getElementById("guess1").classList.remove("error");
 	} else {
 		guessResult1.innerText = guess1.value;
 		document.getElementById("guess1").classList.remove("error");
+		document.getElementById("guess1-not-valid").classList.remove("error");
 	}
 }
 
@@ -145,47 +106,47 @@ function updateSecondName(){
 function updateSecondGuess(){
 	if (guess2.value === ''){
 		document.getElementById("guess2").classList.add("error");
-	} else if (guess2.value < minRange.value){
-		document.getElementById("guess2-too-low").classList.add("error");
-	} else if (guess2.value > maxRange.value){
-		document.getElementById("guess2-too-high").classList.add("error");
+		document.getElementById("guess2-not-valid").classList.remove("error");
+	} else if (parseInt(guess2.value) < parseInt(minRange.value) || parseInt(guess2.value) > parseInt(maxRange.value)){
+		document.getElementById("guess2-not-valid").classList.add("error");
+		document.getElementById("guess2").classList.remove("error");
 	} else {
 		guessResult2.innerText = guess2.value;
 		document.getElementById("guess2").classList.remove("error");
-		document.getElementById("guess2-too-low").classList.remove("error");
-		document.getElementById("guess2-too-high").classList.remove("error");
+		document.getElementById("guess2-not-valid").classList.remove("error");
 	}
 }
 
-//   if .name2 = ""
-//     give name2 and name2-error new id that makes name2-error visible and makes name2 have a red border
-//   else
-//     .score-name2 = .name2
+function playerOneWins(){
+	if (parseInt(guessResult1.innerText) < randomNumber){
+		guessMessage1.innerText = "That's too low!";
+	} else if (parseInt(guessResult1.innerText) > randomNumber){
+		guessMessage1.innerText = "That's too high!";
+	} else {
+		guessMessage1.innerText = "BOOM!";
+		scorecardOne();
+	}
+}
 
-//   if .guess1 = ""
-//     give guess1 and guess1-error new id that makes guess1-error visible and makes guess1 have a red border
-//   elseif guess1 < min-range-input or > max-range-input
-//     give guess1 and guess1-error new id that makes guess1-error visible and makes guess1 have a red border
-//   else
-//     .guess-result1 = .guess1
+function playerTwoWins(){
+	if (parseInt(guessResult2.innerText) < randomNumber){
+		guessMessage2.innerText = "That's too low!";
+	} else if (parseInt(guessResult2.innerText) > randomNumber){
+		guessMessage2.innerText = "That's too high!";
+	} else {
+		guessMessage2.innerText = "BOOM!";
+		scorecardTwo();
+	}
+}
 
-//   if .guess2 = ""
-//     give guess2 and guess2-error new id that makes guess2-error visible and makes guess2 have a red border
-//   elseif guess2 < min-range-input or > max-range-input
-//     give guess2 and guess2-error new id that makes guess2-error visible and makes guess2 have a red border
-//   else
-//     .guess-result1 = .guess2
+function scorecardOne(){
+	chall1Scorecard.innerText = name1.value;
+	chall2Scorecard.innerText = name2.value;
+	cardWinner.innerText = name1.value;
+}
 
-//   if .guess-result1 < randomNumber 
-//     give guess-message1 "that's too low!"
-//   elseif .guess-result1 > randomNumber
-//     give guess-message1 "That's too high!"
-//   else
-//     give guess-message1 "BOOM!"
-
-//   if .guess-result2 < randomNumber 
-//     give guess-message2 "that's too low!"
-//   elseif .guess-result2 > randomNumber
-//     give guess-message2 "That's too high!"
-//   else
-//     give guess-message2 "BOOM!"
+function scorecardTwo(){
+	chall1Scorecard.innerText = name1.value;
+	chall2Scorecard.innerText = name2.value;
+	cardWinner.innerText = name2.value;
+}
