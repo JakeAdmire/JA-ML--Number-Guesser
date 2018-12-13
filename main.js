@@ -18,8 +18,13 @@ var chall1Scorecard = document.querySelector('.chall1-scorecard');
 var chall2Scorecard = document.querySelector('.chall2-scorecard');
 var cardWinner = document.querySelector('.card-winner');
 var randomNumber = randomNumberGenerator(1, 100);
+var allInputFields = document.querySelectorAll('input');
 
 console.log(randomNumber);
+
+allInputFields.forEach(function(inputElement) {
+    inputElement.addEventListener("keyup", clearDisable);
+});
 
 function defaultRange(){
 	parseInt(minRange.value) = 1;

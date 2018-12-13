@@ -130,6 +130,14 @@ input {
   background: white;
 }
 
+button:disabled {
+  background: #D0D2D3;
+}
+
+button:disabled:hover {
+  background: #D0D2D3;
+}
+
 article.set-range {
   min-height: 150px;
   margin: 0;  /*width: 100%;*/
