@@ -171,8 +171,31 @@ label {
   margin-right: 0;
 }
 
-h4.extra-margin {
-  margin-top: 25px;
+/*h4.extra-margin {
+  margin-top: 25px;*/
+/*}*/
+.invisible {
+  visibility: hidden;
+  display: inline;
+}
+
+span.error {
+  visibility: visible;
+  color: red;
+}
+
+.guess1-spans,
+.guess2-spans,
+.name1-spans,
+.name2-spans {
+  position: relative;
+}
+
+.guess1-spans span,
+.guess2-spans span,
+.name1-spans span,
+.name2-spans span {
+  position: absolute;
 }
 
 input {
