@@ -1,14 +1,42 @@
-## Number Guesser Comp Pair Project
-This was the first pair project we had at Turing. The project was to make an interactive guessing game using HTML, CSS and JavaScript. There were three phases of the project that could be completed, each increasing in difficulty. The basic point of the game is for the computer to generate a random number and the user to put in two numbers to create a number range and then input their names and their number guesses. It's actually a fun game! 
+# Number Guesser
 
-In the beginning, my partner and I were VERY unfamiliar with JavaScript and so we thought we would be happy to complete and understand phase one. However, even with our late start to working on JavaScript, we got almost all the way through phase two! 
+## Overview:
 
+Number Guesser is a paired project during MOD-1 of Turing School of Software and Design
 
-I don't want to speak for my partner, but I think we would both agree this had quite a large learning curve. It was even a learning curve to use git and share responsibilities. We had to learn to work together and I think we learned a lot.
+#### Learning Goals for this project were:
+- Use JavaScript for the first time to build a functional 2-player game
+- Work with a partner and create a solid foundation for git-based workflow
 
-## Tech/framework used
-<b>Built with</b>
-- [Sublime Text Editor](https://www.sublimetext.com/)
+[More information about original assignment can be found here](http://frontend.turing.io/projects/number-guesser.html)
+
+[Link to the live site here](https://jakeadmire.github.io/JA-ML--Number-Guesser/)
+
+## Preview:
+
+<img width="1504" alt="Screen Shot 2019-05-08 at 9 03 04 PM" src="https://user-images.githubusercontent.com/44077214/57424434-e0cc4680-71d4-11e9-840c-a7f5593ba03b.png">
+
+## Future Development and Extensions Notes
+
+Some functionality that we'd like to have in future iterations:
+
+- The ability to append score cards to the page on game end
+
+### Technologies Used
+Palette Picker was built using: 
+- HTML
+- CSS
+- JavaScript
 
 ## Credits
-Credits belong to <b>Jacob Admire</b> and <i>Melissa Lachasse</i>
+Credit for this project goes to: 
+- [Jake Admire](https://github.com/JakeAdmire)
+- [Melissa Lachasse](https://github.com/mlachasse)
+
+---
+This project was assigned by Louisa Barrett and Travis Rollins
+
+*@ Turing School of Software and Design, Denver, CO.*
+
+---
+**[Back to top](https://github.com/JakeAdmire/JA-ML--Number-Guesser/blob/master/README.md#number-guesser)**
