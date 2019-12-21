@@ -10,9 +10,7 @@
     A two-player number guessing game!
     <br />
     <br />
-    <b>
-	    <a href="https://jakeadmire.github.io/Number-Guesser">View Demo</a>
-	<b>
+    <b><a href="https://jakeadmire.github.io/Number-Guesser">View Demo</a></b>
   </p>
 </p>
 <div align="center">
@@ -22,6 +20,7 @@
 
 ## Table of Contents
 
+
 - [About The Project](#About-The-Project)
   - [Media](#Media)
   - [Built With](#Built-With)
@@ -30,18 +29,24 @@
 
 ## About The Project
   
+  
 :1234: **Number Guesser** was intended as a way to start learning the basics of JavaScript and responsive design.
 
 
 ### Media
+
+
 ![full page screenshot](https://user-images.githubusercontent.com/44077214/57424434-e0cc4680-71d4-11e9-840c-a7f5593ba03b.png)
 
 ### Built With
+
+
 - HTML5
 - CSS3 
 - JavaScript
 
 ## Contributors
+
 
 Click [here](https://github.com/JakeAdmire/Number-Guesser/graphs/contributors) to view a graph of the contributions to this project.
 - [Jake Admire](https://github.com/jakeadmire)
@@ -49,9 +54,11 @@ Click [here](https://github.com/JakeAdmire/Number-Guesser/graphs/contributors) t
 
 ## Assignment Details
 
+
 The intended assignment was to learn utilize JavaScript and modern CSS features to provide a responsive user experience. 
 
 ---
+
 
 This project was assigned by Louisa Barrett and Travis Rollins 
 _@ Turing School of Software and Design, Denver, CO._
